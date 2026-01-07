@@ -63,9 +63,9 @@
             </div>
         </nav>
 
-        <!-- Hero Section (Apple-style: big, bold, minimal) -->
-        <section class="hero-bg min-h-screen flex flex-col justify-center items-center text-center px-8" style="padding-top: 8rem;">
-            <!-- Logo Placeholder -->
+        <!-- Hero-Header section -->
+        <section class="pt-32 pb-20 flex flex-col justify-center items-center text-center px-8">
+            <!-- Logo P -->
             <img src="assets/cs_full_logo_2.svg" alt="Casual Sight Logo" class="w-[32rem] mb-12 object-contain opacity-80" onerror="this.src='https://via.placeholder.com/400x200/570F5A/FFFFFF?text=Casual+Sight+Logo';">
 
             <h1 class="text-5xl md:text-7xl font-bold max-w-7xl leading-tight">
@@ -74,9 +74,31 @@
             <p class="text-xl md:text-2xl mt-8 max-w-4xl text-gray-700">
                 Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience.
             </p>
+        </section>
 
-            <!-- Hero Image Placeholder (e.g., synth or factory shot) -->
-            <img src="hero-instrument.jpg" alt="Beautiful electronic music instrument" class="mt-20 w-full max-w-5xl rounded-2xl shadow-2xl object-cover" onerror="this.src='https://via.placeholder.com/1200x600/0897A1/FFFFFF?text=Electronic+Music+Instrument';">
+        <!-- Hero Section (Apple-style: big, bold, minimal) -->
+        <section class="hero-bg py-24 md:py-32 flex items-center px-8">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                <!-- Left Column: Video -->
+                <div class="w-full md:w-5/12">
+                    <video class="w-full rounded-2xl shadow-2xl object-cover" autoplay loop muted playsinline>
+                        <source src="assets/molding_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag. A video of the manufacturing process should be here.
+                    </video>
+                </div>
+
+                <!-- Right Column: Text -->
+                <div class="w-full md:w-7/12 text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        You focus on the <span class="text-primary">magic</span>. We'll handle the madness.
+                    </h1>
+                    <p class="text-xl md:text-2xl mt-8 max-w-3xl text-gray-700">
+                        Got a brilliant idea? Awesome! Now for the "fun" part: sourcing parts, wrestling with factory logistics, and making sure it doesn't fall apart.
+                        <br><br>
+                        Or... you could just let us handle it. With our own factories in China and the Philippines and a massive supplier network, we offer expert DFM services so you have nothing to worry about. Seriously, go take a nap. We've got this.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Intro / Passion Story -->
@@ -114,7 +136,7 @@
         </section>
 
         <!-- The Story Section (emotional core) -->
-        <section id="story" class="py-32 px-8 max-w-5xl mx-auto text-center">
+        <section id="story" class="py-32 px-8 max-w-7xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-12">Our Story</h2>
             <p class="text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
                 Building electronic music instruments is tough. Really tough.<br><br>
@@ -131,17 +153,37 @@
             </p>
 
             <!-- Image Placeholder (team or factory) -->
-            <img src="factory-team.jpg" alt="Our passionate team in the factory" class="mt-16 w-full rounded-2xl shadow-2xl object-cover" onerror="this.src='https://via.placeholder.com/1000x600/FF8A28/FFFFFF?text=Our+Team+%26+Factory';">
+            <!-- Carousel Section -->
+            <div id="services-carousel" class="mt-20 w-full max-w-5xl mx-auto relative">
+                <!-- Carousel Container -->
+                <div class="relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Slides will be injected here by JavaScript -->
+                </div>
+                <!-- Navigation Buttons -->
+                <button id="prev-slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <!-- Dots -->
+                <div id="carousel-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                    <!-- Dots will be injected here -->
+                </div>
+            </div>
         </section>
 
         <!-- Closing Call to Action -->
         <section class="py-32 bg-black text-white text-center px-8">
-            <h2 class="text-4xl md:text-6xl font-bold max-w-5xl mx-auto leading-tight">
-                You create the soul.<br>
-                <span class="text-primary">We craft the body</span> that lets your music breathe, sing, and touch others.
+            <h2 class="text-4xl md:text-6xl font-bold max-w-5xl mx-auto leading-tight" id="contact">
+                Let's build something great together.
             </h2>
             <p class="text-xl md:text-2xl mt-12 max-w-3xl mx-auto">
-                Let’s make something beautiful together.
+                Whether you need full-scale manufacturing, design consulting, or help refining your prototype, we're here to discuss your project and offer our expertise.
             </p>
 
             <div class="mt-16 flex flex-col md:flex-row justify-center items-center gap-16">
@@ -167,6 +209,141 @@
             <p class="mt-4">Factories in China & Philippines • Heart in every build</p>
         </footer>
 
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-800/95 backdrop-blur-sm text-white p-4 z-50">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
+                <p class="text-gray-300">
+                    We use cookies and similar technologies, including from third-party services like Google Analytics, to enhance your experience and analyze site traffic. By continuing to visit this site, you agree to our use of these technologies.
+                </p>
+                <button id="accept-cookies" class="px-6 py-2 bg-primary text-white font-semibold rounded-full hover:bg-opacity-90 transition-colors flex-shrink-0">
+                    Accept
+                </button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const carouselData = [
+                    {
+                        image: "assets/img_carousel_a.jpg",
+                        title: "Full Prototyping Services",
+                        content: "We offer a complete prototyping service for SMT, enclosures, and packaging to bring your initial concept to a tangible, testable product.",
+                        background_color: "bg-gray-800"
+                    },
+                    {
+                        image: "https://via.placeholder.com/1000x600/0897A1/FFFFFF?text=In-House+SMT",
+                        title: "In-House SMT Assembly",
+                        content: "Our state-of-the-art facilities provide high-quality Surface-Mount Technology (SMT) assembly for your PCBs, ensuring precision and rapid turnarounds.",
+                        background_color: "bg-accent"
+                    },
+                    {
+                        image: "https://via.placeholder.com/1000x600/570F5A/FFFFFF?text=Metal+Enclosures",
+                        title: "Metal Enclosures",
+                        content: "We specialize in laser cutting for sheet metal, custom aluminum profiles, and high-pressure die casting to create durable and beautiful enclosures.",
+                        background_color: "bg-deep"
+                    },
+                    {
+                        image: "https://via.placeholder.com/1000x600/FF8A28/FFFFFF?text=Plastic+Injection",
+                        title: "Plastic Injection Molding",
+                        content: "Leverage our expertise in plastic injection molding for both small, intricate components and large, robust housing parts for your electronics.",
+                        background_color: "bg-highlight"
+                    },
+                    {
+                        image: "https://via.placeholder.com/1000x600/AF043D/FFFFFF?text=Customization",
+                        title: "Customization Services",
+                        content: "From custom finishes and printing to unique packaging solutions, we help you tailor every detail to match your brand's unique identity.",
+                        background_color: "bg-primary"
+                    }
+                ];
+
+                const carouselContainer = document.querySelector('#services-carousel .relative.h-96');
+                const dotsContainer = document.getElementById('carousel-dots');
+                const prevButton = document.getElementById('prev-slide');
+                const nextButton = document.getElementById('next-slide');
+                let currentSlide = 0;
+                let autoPlayInterval = null;
+
+                function showSlide(index) {
+                    const slides = document.querySelectorAll('.carousel-slide');
+                    const dots = document.querySelectorAll('.carousel-dot');
+
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('opacity-0', i !== index);
+                        slide.classList.toggle('opacity-100', i === index);
+                    });
+
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('bg-white', i === index);
+                        dot.classList.toggle('bg-white/50', i !== index);
+                    });
+                    currentSlide = index;
+                }
+
+                function startAutoPlay() {
+                    stopAutoPlay(); // Ensure no multiple intervals are running
+                    autoPlayInterval = setInterval(() => {
+                        nextButton.click();
+                    }, 5000);
+                }
+
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                }
+
+                // Populate carousel
+                carouselData.forEach((item, index) => {
+                    // Create Slide
+                    const slide = document.createElement('div');
+                    slide.className = `carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out ${item.background_color} ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+                    slide.innerHTML = `
+                        <img src="${item.image}" class="w-full h-full object-cover opacity-30" onerror="this.style.opacity=0">
+                        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8">
+                            <h3 class="text-3xl font-bold">${item.title}</h3>
+                            <p class="mt-4 text-lg max-w-2xl">${item.content}</p>
+                        </div>
+                    `;
+                    carouselContainer.appendChild(slide);
+
+                    // Create Dot
+                    const dot = document.createElement('button');
+                    dot.className = `carousel-dot w-3 h-3 rounded-full transition ${index === 0 ? 'bg-white' : 'bg-white/50'}`;
+                    dot.addEventListener('click', () => {
+                        showSlide(index);
+                        startAutoPlay(); // Restart autoplay on manual interaction
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                // Navigation logic
+                nextButton.addEventListener('click', () => {
+                    const next = (currentSlide + 1) % carouselData.length;
+                    showSlide(next);
+                    startAutoPlay(); // Restart autoplay on manual interaction
+                });
+
+                prevButton.addEventListener('click', () => {
+                    const prev = (currentSlide - 1 + carouselData.length) % carouselData.length;
+                    showSlide(prev);
+                    startAutoPlay(); // Restart autoplay on manual interaction
+                });
+
+                // Initial start
+                startAutoPlay();
+
+                // Cookie Consent Logic
+                const cookieBanner = document.getElementById('cookie-banner');
+                const acceptButton = document.getElementById('accept-cookies');
+
+                if (!localStorage.getItem('cookieConsent')) {
+                    cookieBanner.classList.remove('hidden');
+                }
+
+                acceptButton.addEventListener('click', () => {
+                    localStorage.setItem('cookieConsent', 'true');
+                    cookieBanner.classList.add('hidden');
+                });
+            });
+        </script>
     </body>
 
 </html>
