@@ -1,408 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVDJV6HPFJ"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-
-            gtag('config', 'G-XVDJV6HPFJ');
-        </script>
-
-
-        <title>Casual Sight | Manufacturing for Music Instruments & Electronics</title>
-        <meta name="description" content="We help brands bring electronic music instruments and consumer electronics to life with expert manufacturing, heartfelt support, and 30 years of experience.">
-
-        <!-- SEO & Social Sharing -->
-        <link rel="canonical" href="https://www.casualsight.com/index.html" />
-        <meta property="og:title" content="Casual Sight | Manufacturing for Music Instruments & Electronics" />
-        <meta property="og:description" content="Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience." />
-        <meta property="og:image" content="https://www.casualsight.com/assets/social_share.png" />
-        <meta property="og:url" content="https://www.casualsight.com/index.html" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Casual Sight | Manufacturing for Music Instruments & Electronics" />
-        <meta name="twitter:description" content="Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience." />
-        <meta name="twitter:image" content="https://www.casualsight.com/assets/social_share.png" />
-        <!-- End SEO & Social Sharing -->
-
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-        <!-- Tailwind CSS via CDN (perfect for static hosting) -->
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <!-- Google Fonts: Inter for clean, modern tech feel (highly recommended for manufacturing/tech sites) -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        fonts: {
-                            sans: ['Inter', 'sans-serif'],
-                        },
-                        colors: {
-                            primary: '#AF043D',   // Deep red (accent for passion/music)
-                            accent: '#0897A1',    // Teal (trust/reliability)
-                            highlight: '#FF8A28', // Orange (energy/creativity)
-                            deep: '#570F5A',      // Purple (depth/sophistication)
-                        }
-                    }
-                }
-            }
-        </script>
-
-        <style>
-            body {
-                font-feature-settings: 'kern' 1, 'liga' 1;
-            }
-
-            .hero-bg {
-                background: linear-gradient(to bottom right, #ffffff, #f8f8f8);
-            }
-        </style>
-
-        <!-- Structured Data -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Casual Sight",
-          "url": "https://www.casualsight.com",
-          "logo": "https://www.casualsight.com/assets/cs_full_logo_3.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "info@casualsight.com",
-            "contactType": "Customer Service"
-          }
+---
+layout: default
+carousel_source: carousel
+carousel_timing: 5000
+title: Casual Sight | Manufacturing for Music Instruments & Electronics
+description: We help brands bring electronic music instruments and consumer electronics to life with expert manufacturing, heartfelt support, and 30 years of experience.
+head_extra: |
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Casual Sight",
+        "url": "https://www.casualsight.com",
+        "logo": "https://www.casualsight.com/assets/cs_full_logo_3.svg",
+        "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@casualsight.com",
+        "contactType": "Customer Service"
         }
-        </script>
-    </head>
+    }
+    </script>
 
-    <body class="bg-white text-black font-sans leading-relaxed">
+---
+<!-- Hero-Header section -->
+<section class="pt-32 pb-20 flex flex-col justify-center items-center text-center px-8">
+    <!-- Logo P -->
+    <img src="assets/cs_full_logo_3.svg" alt="Casual Sight Logo" class="w-[32rem] mb-12 object-contain opacity-80" onerror="this.src='https://via.placeholder.com/400x200/570F5A/FFFFFF?text=Casual+Sight+Logo';">
 
-        <!-- Navigation Bar -->
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-md">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="flex justify-between items-center py-4">
-                    <!-- Logo and Brand Name -->
-                    <a href="#" class="flex items-center space-x-4">
-                        <img src="assets/cs_full_logo_3.svg" alt="Casual Sight Logo" class="h-8 object-contain" onerror="this.style.display='none'">
-                    </a>
+    <h1 class="text-5xl md:text-7xl font-bold max-w-7xl leading-tight">
+        <span class="text-primary">You craft the soul,</span> we build the body.
+    </h1>
+    <p class="text-xl md:text-2xl mt-8 max-w-4xl text-gray-700">
+        Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience.
+    </p>
+</section>
 
-                    <!-- Navigation Links -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="#services" class="text-lg font-medium text-gray-700 hover:text-primary transition">Services</a>
-                        <a href="#story" class="text-lg font-medium text-gray-700 hover:text-primary transition">Our Story</a>
-                        <a href="happy-customers.html" class="text-lg font-medium text-gray-700 hover:text-primary transition">Happy Customers</a>
-                        <a href="about.html" class="text-lg font-medium text-gray-700 hover:text-primary transition">About</a>
-                        <a href="jobs.html" class="text-lg font-medium text-gray-700 hover:text-primary transition">Careers</a>
-                        <a href="mailto:info@casualsight.com" class="text-lg font-medium text-gray-700 hover:text-primary transition">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero-Header section -->
-        <section class="pt-32 pb-20 flex flex-col justify-center items-center text-center px-8">
-            <!-- Logo P -->
-            <img src="assets/cs_full_logo_3.svg" alt="Casual Sight Logo" class="w-[32rem] mb-12 object-contain opacity-80" onerror="this.src='https://via.placeholder.com/400x200/570F5A/FFFFFF?text=Casual+Sight+Logo';">
-
-            <h1 class="text-5xl md:text-7xl font-bold max-w-7xl leading-tight">
-                <span class="text-primary">You craft the soul,</span> we build the body.
-            </h1>
-            <p class="text-xl md:text-2xl mt-8 max-w-4xl text-gray-700">
-                Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience.
-            </p>
-        </section>
-
-        <!-- Hero Section (Apple-style: big, bold, minimal) -->
-        <section class="hero-bg py-24 md:py-32 flex items-center px-8">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-                <!-- Left Column: Video -->
-                <div class="w-full md:w-5/12">
-                    <video class="w-full rounded-2xl shadow-2xl object-cover" autoplay loop muted playsinline>
-                        <source src="assets/molding_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag. A video of the manufacturing process should be here.
-                    </video>
-                </div>
-
-                <!-- Right Column: Text -->
-                <div class="w-full md:w-7/12 text-center md:text-left">
-                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-                        You focus on the <span class="text-primary">magic</span>. We'll handle the madness.
-                    </h1>
-                    <p class="text-xl md:text-2xl mt-8 max-w-3xl text-gray-700">
-                        Got a brilliant idea? Awesome! Now for the "fun" part: sourcing parts, wrestling with factory logistics, and making sure it doesn't fall apart.
-                        <br><br>
-                        Or... you could just let us handle it. With our own factories in China and the Philippines and a massive supplier network, we offer expert DFM services so you have nothing to worry about. Seriously, go take a nap. We've got this.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Intro / Passion Story -->
-        <section class="py-24 px-8 max-w-6xl mx-auto text-center">
-            <p class="text-lg md:text-xl leading-relaxed text-gray-800">
-                We love helping small (and big!) brands bring their beautiful creations to life.<br><br>
-                With our own factories in China and the Philippines, we’re right there with you — offering warm, reliable service every step of the way.
-                30 years of hands-on experience crafting consumer electronics — experience we pour into every instrument we build together.
-            </p>
-        </section>
-
-        <!-- Services Grid (clean, minimal cards) -->
-        <section id="services" class="py-24 bg-gray-50 px-8">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">How We Help You</h2>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="bg-white p-10 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-semibold text-primary mb-4">Design & Refinement</h3>
-                        <p class="text-lg text-gray-700">We’ll refine your layout together, making it truly manufacturable without losing your vision. We facilitate design enclosures and packaging that feel inspiring to touch and behold.</p>
-                    </div>
-                    <div class="bg-white p-10 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-semibold text-accent mb-4">Components & Quality</h3>
-                        <p class="text-lg text-gray-700">We source components and handle strict quality control — so your instrument feels reliable.</p>
-                    </div>
-                    <div class="bg-white p-10 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-semibold text-highlight mb-4">Compliance & Testing</h3>
-                        <p class="text-lg text-gray-700">We guide you through regulatory testing, ensuring your creation reaches the world safely.</p>
-                    </div>
-                    <div class="bg-white p-10 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-semibold text-deep mb-4">Support Beyond Manufacturing</h3>
-                        <p class="text-lg text-gray-700">We’re here to guide your crowdfunding campaigns, handle drop shipping, and even discuss financing options — because we want your vision to come alive.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Story Section (emotional core) -->
-        <section id="story" class="py-32 px-8 max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12">Our Story</h2>
-            <p class="text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
-                Building electronic music instruments is tough. Really tough.<br><br>
-                We know how it feels to pour your heart into a sound that’s meant to move people, only to spend weeks or months chasing down manufacturers who just don’t get it — or who say “sorry, your quantity is too small.”<br><br>
-                We’ve been there.<br><br>
-                For years we built consumer electronics — big runs, tight tolerances, everything perfect. But when we finally created our own boutique synthesizers, the ones we dreamed would touch souls, we hit that painful wall: “Too small. Not worth our time.” It hurt. Because those instruments weren’t just products to us — they were pieces of our passion, our late nights, our deepest sonic feelings.<br><br>
-                So we said: enough.<br><br>
-                We gathered a small team of people who love sound as much as we do, we built our own factory from the ground up, and we started making our synths exactly the way we wanted — with care, precision, and real understanding of what an instrument needs to feel alive in your hands.<br><br>
-                Now we’re here for you.<br><br>
-                We’ve walked the same path you’re on. We know how precious every knob, every oscillator, every little sonic touch or blast is to you. We get it — because we feel it too.<br><br>
-                <span class="text-primary"><b>You create the soul.</b></span><br>
-                <b>We craft the body that lets your music breathe, sing, and touch others.</b><br><br>
-                Let’s make something beautiful together.<br><br>
-            </p>
-
-            <!-- Image Placeholder (team or factory) -->
-            <!-- Carousel Section -->
-            <div id="services-carousel" class="mt-20 w-full max-w-5xl mx-auto relative">
-                <!-- Carousel Container -->
-                <div class="relative h-96 rounded-2xl shadow-2xl overflow-hidden">
-                    <!-- Slides will be injected here by JavaScript -->
-                </div>
-                <!-- Navigation Buttons -->
-                <button id="prev-slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="next-slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-                <!-- Dots -->
-                <div id="carousel-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                    <!-- Dots will be injected here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- About/FAQ Section -->
-        <section id="about" class="py-24 bg-gray-50 px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">Got Questions?</h2>
-                <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto text-gray-700 mb-12">
-                    We've probably heard them. We've definitely answered them. Check out our FAQ to see if we're psychic.
-                </p>
-                <a href="about.html" class="inline-block px-12 py-5 bg-primary text-white text-xl font-semibold rounded-full hover:bg-opacity-90 transition">
-                    Read our FAQ
-                </a>
-            </div>
-        </section>
-
-        <!-- Closing Call to Action -->
-        <section class="py-32 bg-black text-white text-center px-8">
-            <h2 class="text-4xl md:text-6xl font-bold max-w-5xl mx-auto leading-tight" id="contact">
-                Let's build something great together.
-            </h2>
-            <p class="text-xl md:text-2xl mt-12 max-w-3xl mx-auto">
-                Whether you need full-scale manufacturing, design consulting, or help refining your prototype, we're here to discuss your project and offer our expertise.
-            </p>
-
-            <div class="mt-16 flex flex-col md:flex-row justify-center items-center gap-16">
-                <!-- Email Contact -->
-                <div class="text-center">
-                    <a href="mailto:info@casualsight.com" class="inline-block px-12 py-5 bg-primary text-white text-xl font-semibold rounded-full hover:bg-opacity-90 transition">
-                        Email Us
-                    </a>
-                    <p class="mt-4 text-lg text-gray-400">or email directly at <a href="mailto:info@casualsight.com" class="underline hover:text-white">info@casualsight.com</a></p>
-                </div>
-
-                <!-- WhatsApp QR Code -->
-                <div class="text-center">
-                    <img src="assets/qrcode_whatsapp.png" alt="WhatsApp QR Code" class="w-32 h-32 rounded-lg bg-white p-1 mx-auto">
-                    <p class="mt-4 text-lg text-gray-400">Connect on WhatsApp</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer (minimal) -->
-        <footer class="py-12 bg-gray-100 text-center text-gray-600">
-            <p>&copy; 2026 Casual Sight. All rights reserved.</p>
-            <p class="mt-4">Factories in China & Philippines • Heart in every build</p>
-        </footer>
-
-        <!-- Cookie Consent Banner -->
-        <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-800/95 backdrop-blur-sm text-white p-4 z-50">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
-                <p class="text-gray-300">
-                    We use cookies and similar technologies, including from third-party services like Google Analytics, to enhance your experience and analyze site traffic. By continuing to visit this site, you agree to our use of these technologies.
-                </p>
-                <button id="accept-cookies" class="px-6 py-2 bg-primary text-white font-semibold rounded-full hover:bg-opacity-90 transition-colors flex-shrink-0">
-                    Accept
-                </button>
-            </div>
+<!-- Hero Section (Apple-style: big, bold, minimal) -->
+<section class="hero-bg py-24 md:py-32 flex items-center px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <!-- Left Column: Video -->
+        <div class="w-full md:w-5/12">
+            <video class="w-full rounded-2xl shadow-2xl object-cover" autoplay loop muted playsinline>
+                <source src="assets/molding_video.mp4" type="video/mp4">
+                Your browser does not support the video tag. A video of the manufacturing process should be here.
+            </video>
         </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const carouselData = [
-                    {
-                        image: "assets/img_carousel_a.jpg",
-                        title: "Full Prototyping Services",
-                        content: "We offer a complete prototyping service for SMT, enclosures, and packaging to bring your initial concept to a tangible, testable product.",
-                        background_color: "bg-gray-800"
-                    },
-                    {
-                        image: "",
-                        title: "In-House SMT Assembly",
-                        content: "Our state-of-the-art facilities provide high-quality Surface-Mount Technology (SMT) assembly for your PCBs, ensuring precision and rapid turnarounds.",
-                        background_color: "bg-accent"
-                    },
-                    {
-                        image: "",
-                        title: "Metal Enclosures",
-                        content: "We specialize in laser cutting for sheet metal, custom aluminum profiles, and high-pressure die casting to create durable and beautiful enclosures.",
-                        background_color: "bg-deep"
-                    },
-                    {
-                        image: "",
-                        title: "Plastic Injection Molding",
-                        content: "Leverage our expertise in plastic injection molding for both small, intricate components and large, robust housing parts for your electronics.",
-                        background_color: "bg-highlight"
-                    },
-                    {
-                        image: "",
-                        title: "Customization Services",
-                        content: "From custom finishes and printing to unique packaging solutions, we help you tailor every detail to match your brand's unique identity.",
-                        background_color: "bg-primary"
-                    }
-                ];
+        <!-- Right Column: Text -->
+        <div class="w-full md:w-7/12 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                You focus on the <span class="text-primary">magic</span>. We'll handle the madness.
+            </h1>
+            <p class="text-xl md:text-2xl mt-8 max-w-3xl text-gray-700">
+                Got a brilliant idea? Awesome! Now for the "fun" part: sourcing parts, wrestling with factory logistics, and making sure it doesn't fall apart.
+                <br><br>
+                Or... you could just let us handle it. With our own factories in China and the Philippines and a massive supplier network, we offer expert DFM services so you have nothing to worry about. Seriously, go take a nap. We've got this.
+            </p>
+        </div>
+    </div>
+</section>
 
-                const carouselContainer = document.querySelector('#services-carousel .relative.h-96');
-                const dotsContainer = document.getElementById('carousel-dots');
-                const prevButton = document.getElementById('prev-slide');
-                const nextButton = document.getElementById('next-slide');
-                let currentSlide = 0;
-                let autoPlayInterval = null;
+<!-- Intro / Passion Story -->
+<section class="py-24 px-8 max-w-6xl mx-auto text-center">
+    <p class="text-lg md:text-xl leading-relaxed text-gray-800">
+        We love helping small (and big!) brands bring their beautiful creations to life.<br><br>
+        With our own factories in China and the Philippines, we’re right there with you — offering warm, reliable service every step of the way.
+        30 years of hands-on experience crafting consumer electronics — experience we pour into every instrument we build together.
+    </p>
+</section>
 
-                function showSlide(index) {
-                    const slides = document.querySelectorAll('.carousel-slide');
-                    const dots = document.querySelectorAll('.carousel-dot');
+<!-- Services Grid (clean, minimal cards) -->
+<section id="services" class="py-24 bg-gray-50 px-8">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">How We Help You</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-10 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-primary mb-4">Design & Refinement</h3>
+                <p class="text-lg text-gray-700">We’ll refine your layout together, making it truly manufacturable without losing your vision. We facilitate design enclosures and packaging that feel inspiring to touch and behold.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-accent mb-4">Components & Quality</h3>
+                <p class="text-lg text-gray-700">We source components and handle strict quality control — so your instrument feels reliable.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-highlight mb-4">Compliance & Testing</h3>
+                <p class="text-lg text-gray-700">We guide you through regulatory testing, ensuring your creation reaches the world safely.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-deep mb-4">Support Beyond Manufacturing</h3>
+                <p class="text-lg text-gray-700">We’re here to guide your crowdfunding campaigns, handle drop shipping, and even discuss financing options — because we want your vision to come alive.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    slides.forEach((slide, i) => {
-                        slide.classList.toggle('opacity-0', i !== index);
-                        slide.classList.toggle('opacity-100', i === index);
-                    });
+<!-- The Story Section (emotional core) -->
+<section id="story" class="py-32 px-8 max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12">Our Story</h2>
+    <p class="text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
+        Building electronic music instruments is tough. Really tough.<br><br>
+        We know how it feels to pour your heart into a sound that’s meant to move people, only to spend weeks or months chasing down manufacturers who just don’t get it — or who say “sorry, your quantity is too small.”<br><br>
+        We’ve been there.<br><br>
+        For years we built consumer electronics — big runs, tight tolerances, everything perfect. But when we finally created our own boutique synthesizers, the ones we dreamed would touch souls, we hit that painful wall: “Too small. Not worth our time.” It hurt. Because those instruments weren’t just products to us — they were pieces of our passion, our late nights, our deepest sonic feelings.<br><br>
+        So we said: enough.<br><br>
+        We gathered a small team of people who love sound as much as we do, we built our own factory from the ground up, and we started making our synths exactly the way we wanted — with care, precision, and real understanding of what an instrument needs to feel alive in your hands.<br><br>
+        Now we’re here for you.<br><br>
+        We’ve walked the same path you’re on. We know how precious every knob, every oscillator, every little sonic touch or blast is to you. We get it — because we feel it too.<br><br>
+        <span class="text-primary"><b>You create the soul.</b></span><br>
+        <b>We craft the body that lets your music breathe, sing, and touch others.</b><br><br>
+        Let’s make something beautiful together.<br><br>
+    </p>
 
-                    dots.forEach((dot, i) => {
-                        dot.classList.toggle('bg-white', i === index);
-                        dot.classList.toggle('bg-white/50', i !== index);
-                    });
-                    currentSlide = index;
-                }
+    <!-- Image Placeholder (team or factory) -->
+    {% include carousel.html %}
+</section>
 
-                function startAutoPlay() {
-                    stopAutoPlay(); // Ensure no multiple intervals are running
-                    autoPlayInterval = setInterval(() => {
-                        nextButton.click();
-                    }, 5000);
-                }
+<!-- About/FAQ Section -->
+<section id="about" class="py-24 bg-gray-50 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">Got Questions?</h2>
+        <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto text-gray-700 mb-12">
+            We've probably heard them. We've definitely answered them. Check out our FAQ to see if we're psychic.
+        </p>
+        <a href="about.html" class="inline-block px-12 py-5 bg-primary text-white text-xl font-semibold rounded-full hover:bg-opacity-90 transition">
+            Read our FAQ
+        </a>
+    </div>
+</section>
 
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
+<!-- Closing Call to Action -->
+<section class="py-32 bg-black text-white text-center px-8">
+    <h2 class="text-4xl md:text-6xl font-bold max-w-5xl mx-auto leading-tight" id="contact">
+        Let's build something great together.
+    </h2>
+    <p class="text-xl md:text-2xl mt-12 max-w-3xl mx-auto">
+        Whether you need full-scale manufacturing, design consulting, or help refining your prototype, we're here to discuss your project and offer our expertise.
+    </p>
 
-                // Populate carousel
-                carouselData.forEach((item, index) => {
-                    // Create Slide
-                    const slide = document.createElement('div');
-                    slide.className = `carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out ${item.background_color} ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
-                    slide.innerHTML = `
-                        <img src="${item.image}" class="w-full h-full object-cover opacity-30" onerror="this.style.opacity=0">
-                        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8">
-                            <h3 class="text-3xl font-bold">${item.title}</h3>
-                            <p class="mt-4 text-lg max-w-2xl">${item.content}</p>
-                        </div>
-                    `;
-                    carouselContainer.appendChild(slide);
+    <div class="mt-16 flex flex-col md:flex-row justify-center items-center gap-16">
+        <!-- Email Contact -->
+        <div class="text-center">
+            <a href="mailto:info@casualsight.com" class="inline-block px-12 py-5 bg-primary text-white text-xl font-semibold rounded-full hover:bg-opacity-90 transition">
+                Email Us
+            </a>
+            <p class="mt-4 text-lg text-gray-400">or email directly at <a href="mailto:info@casualsight.com" class="underline hover:text-white">info@casualsight.com</a></p>
+        </div>
 
-                    // Create Dot
-                    const dot = document.createElement('button');
-                    dot.className = `carousel-dot w-3 h-3 rounded-full transition ${index === 0 ? 'bg-white' : 'bg-white/50'}`;
-                    dot.addEventListener('click', () => {
-                        showSlide(index);
-                        startAutoPlay(); // Restart autoplay on manual interaction
-                    });
-                    dotsContainer.appendChild(dot);
-                });
+        <!-- WhatsApp QR Code -->
+        <div class="text-center">
+            <img src="assets/qrcode_whatsapp.png" alt="WhatsApp QR Code" class="w-32 h-32 rounded-lg bg-white p-1 mx-auto">
+            <p class="mt-4 text-lg text-gray-400">Connect on WhatsApp</p>
+        </div>
+    </div>
+</section>
 
-                // Navigation logic
-                nextButton.addEventListener('click', () => {
-                    const next = (currentSlide + 1) % carouselData.length;
-                    showSlide(next);
-                    startAutoPlay(); // Restart autoplay on manual interaction
-                });
 
-                prevButton.addEventListener('click', () => {
-                    const prev = (currentSlide - 1 + carouselData.length) % carouselData.length;
-                    showSlide(prev);
-                    startAutoPlay(); // Restart autoplay on manual interaction
-                });
-
-                // Initial start
-                startAutoPlay();
-
-                // Cookie Consent Logic
-                const cookieBanner = document.getElementById('cookie-banner');
-                const acceptButton = document.getElementById('accept-cookies');
-
-                if (!localStorage.getItem('cookieConsent')) {
-                    cookieBanner.classList.remove('hidden');
-                }
-
-                acceptButton.addEventListener('click', () => {
-                    localStorage.setItem('cookieConsent', 'true');
-                    cookieBanner.classList.add('hidden');
-                });
-            });
-        </script>
-    </body>
-
-</html>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-800/95 backdrop-blur-sm text-white p-4 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
+        <p class="text-gray-300">
+            We use cookies and similar technologies, including from third-party services like Google Analytics, to enhance your experience and analyze site traffic. By continuing to visit this site, you agree to our use of these technologies.
+        </p>
+        <button id="accept-cookies" class="px-6 py-2 bg-primary text-white font-semibold rounded-full hover:bg-opacity-90 transition-colors flex-shrink-0">
+            Accept
+        </button>
+    </div>
+</div>

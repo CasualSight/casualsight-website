@@ -1,0 +1,47 @@
+<!-- Carousel Section -->
+<div id="services-carousel" class="mt-20 w-full max-w-5xl mx-auto relative">
+    <!-- Carousel Container -->
+    <div class="relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+        {% for item in site.data.carousel %}
+        <div class="carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out {{ item.background_color }} {% if forloop.first %}opacity-100{% else %}opacity-0{% endif %}">
+            {% if item.image and item.image != "" %}
+                <div class="flex h-full {% if item.position == 'right' %}flex-row-reverse{% else %}flex-row{% endif %}">
+                    <!-- Image Column -->
+                    <div class="w-1/2">
+                        <img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Text Column -->
+                    <div class="w-1/2 flex flex-col justify-center items-center text-center text-white p-8">
+                        <h3 class="text-3xl font-bold">{{ item.title }}</h3>
+                        <p class="mt-4 text-lg max-w-md">{{ item.content }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8">
+                    <h3 class="text-3xl font-bold">{{ item.title }}</h3>
+                    <p class="mt-4 text-lg max-w-2xl">{{ item.content }}</p>
+                </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Navigation Buttons -->
+    <button id="prev-slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+    <button id="next-slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+    <!-- Dots -->
+    <div id="carousel-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        {% if site.data.carousel.size > 1 %}
+            {% for item in site.data.carousel %}
+                <button class="carousel-dot w-3 h-3 rounded-full transition {% if forloop.first %}bg-white{% else %}bg-white/50{% endif %}"></button>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>

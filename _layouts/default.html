@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVDJV6HPFJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-XVDJV6HPFJ');
+        </script>
+
+        <title>Casual Sight | Manufacturing for Music Instruments & Electronics</title>
+        <meta name="description" content="We help brands bring electronic music instruments and consumer electronics to life with expert manufacturing, heartfelt support, and 30 years of experience.">
+
+        <!-- SEO & Social Sharing -->
+        <link rel="canonical" href="https://www.casualsight.com/index.html" />
+        <meta property="og:title" content="Casual Sight | Manufacturing for Music Instruments & Electronics" />
+        <meta property="og:description" content="Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience." />
+        <meta property="og:image" content="https://www.casualsight.com/assets/social_share.png" />
+        <meta property="og:url" content="https://www.casualsight.com/index.html" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Casual Sight | Manufacturing for Music Instruments & Electronics" />
+        <meta name="twitter:description" content="Expert manufacturing for electronic music instruments and consumer electronics — with heart, precision, and 30 years of experience." />
+        <meta name="twitter:image" content="https://www.casualsight.com/assets/social_share.png" />
+        <!-- End SEO & Social Sharing -->
+
+        <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <!-- Tailwind CSS via CDN (perfect for static hosting) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Google Fonts: Inter for clean, modern tech feel (highly recommended for manufacturing/tech sites) -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fonts: {
+                            sans: ['Inter', 'sans-serif'],
+                        },
+                        colors: {
+                            primary: '#AF043D',   // Deep red (accent for passion/music)
+                            accent: '#0897A1',    // Teal (trust/reliability)
+                            highlight: '#FF8A28', // Orange (energy/creativity)
+                            deep: '#570F5A',      // Purple (depth/sophistication)
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <style>
+            body {
+                font-feature-settings: 'kern' 1, 'liga' 1;
+            }
+
+            .hero-bg {
+                background: linear-gradient(to bottom right, #ffffff, #f8f8f8);
+            }
+        </style>
+
+        {{ page.head_extra }}
+    </head>
+
+    <body class="bg-white text-black font-sans leading-relaxed">
+
+
+        {% include header.html %}
+
+        <main>
+            {{ content }} <!-- This is where page/post content goes -->
+        </main>
+
+        {% include footer.html %}
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const carouselEl = document.getElementById('services-carousel');
+                if (!carouselEl) return;
+
+                {% if page.carousel_source %}
+                const carouselData = {{ site.data[page.carousel_source] | jsonify
+            }};
+            {% else %}
+            const carouselData = [];
+            {% endif %}
+
+            const carouselContainer = carouselEl.querySelector('.relative.h-96');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const prevButton = document.getElementById('prev-slide');
+            const nextButton = document.getElementById('next-slide');
+            let currentSlide = 0;
+            let autoPlayInterval = null;
+
+            if (!carouselContainer || !dotsContainer || !prevButton || !nextButton) {
+                return;
+            }
+
+            function showSlide(index) {
+                const slides = document.querySelectorAll('.carousel-slide');
+                const dots = document.querySelectorAll('.carousel-dot');
+
+                if (slides.length > 0) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('opacity-0', i !== index);
+                        slide.classList.toggle('opacity-100', i === index);
+                    });
+                }
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('bg-white', i === index);
+                    dot.classList.toggle('bg-white/50', i !== index);
+                });
+                currentSlide = index;
+            }
+
+            function startAutoPlay() {
+                stopAutoPlay(); // Ensure no multiple intervals are running
+                if (carouselData.length > 1) {
+                    autoPlayInterval = setInterval(() => {
+                        nextButton.click();
+                    }, {{ page.carousel_timing | default: 5000 }});
+            }
+                }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    startAutoPlay(); // Restart autoplay on manual interaction
+                });
+            });
+
+            // Navigation logic
+            nextButton.addEventListener('click', () => {
+                const next = (currentSlide + 1) % dots.length;
+                showSlide(next);
+                startAutoPlay(); // Restart autoplay on manual interaction
+            });
+
+            prevButton.addEventListener('click', () => {
+                const prev = (currentSlide - 1 + dots.length) % dots.length;
+                showSlide(prev);
+                startAutoPlay(); // Restart autoplay on manual interaction
+            });
+
+            // Initial start
+            startAutoPlay();
+
+            // Cookie Consent Logic
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptButton = document.getElementById('accept-cookies');
+
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieBanner.classList.remove('hidden');
+            }
+
+            acceptButton.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'true');
+                cookieBanner.classList.add('hidden');
+            });
+            });
+        </script>
+
+        <script>
+            // document.querySelectorAll('form[data-form="subscribe"]').forEach(form => {
+            //   form.addEventListener('submit', function (event) {
+            //     event.preventDefault();
+
+            //     const currentForm = event.target;
+            //     const formData = new FormData(currentForm);
+            //     const data = Object.fromEntries(formData.entries());
+            //     const responseDiv = currentForm.nextElementSibling;
+
+            //     // Handle tags - split by comma and trim whitespace, then create an array
+            //     const tagsInput = currentForm.querySelector('input[name="tags"]');
+            //     if (tagsInput && tagsInput.value) {
+            //       data.tags = tagsInput.value.split(',').map(tag => tag.trim());
+            //     }
+
+            //     const baseUrl = 'https://inventor.1voct.org';
+            //     const apiUrl = `${baseUrl}/inventor/api/create_crm_user/`;
+
+            //     fetch(apiUrl, {
+            //       method: 'POST',
+            //       headers: {
+            //         'Content-Type': 'application/json',
+            //       },
+            //       body: JSON.stringify(data),
+            //     })
+            //       .then(response => response.json())
+            //       .then(result => {
+            //         if (result.status === 'success') {
+            //           responseDiv.className = 'text-brand-gold';
+            //           responseDiv.textContent = 'Thank you for subscribing!';
+            //           currentForm.reset();
+            //         } else {
+            //           responseDiv.className = 'text-red-400';
+            //           responseDiv.textContent = 'Error: ' + (result.message || 'An unknown error occurred.');
+            //         }
+            //       })
+            //       .catch(error => {
+            //         console.error('Error:', error);
+            //         responseDiv.className = 'text-red-400';
+            //         responseDiv.textContent = 'A network error occurred. Please try again.';
+            //       });
+            //   });
+            // });
+        </script>
+        <script>
+            {% include inventor_api.js %}
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "image": "",
+        "image_alt": "A prototype circuit board.",
+        "title": "Full Prototyping Services",
+        "content": "We offer a complete prototyping service for SMT, enclosures, and packaging to bring your initial concept to a tangible, testable product.",
+        "background_color": "bg-gray-800",
+        "position": "left"
+    },
+    {
+        "image": "",
+        "image_alt": "Surface-Mount Technology assembly line.",
+        "title": "In-House SMT Assembly",
+        "content": "Our state-of-the-art facilities provide high-quality Surface-Mount Technology (SMT) assembly for your PCBs, ensuring precision and rapid turnarounds.",
+        "background_color": "bg-accent",
+        "position": "right"
+    },
+    {
+        "image": "",
+        "image_alt": "A custom metal enclosure for electronics.",
+        "title": "Metal Enclosures",
+        "content": "We specialize in laser cutting for sheet metal, custom aluminum profiles, and high-pressure die casting to create durable and beautiful enclosures.",
+        "background_color": "bg-deep",
+        "position": "left"
+    },
+    {
+        "image": "",
+        "image_alt": "Plastic injection molding machine in operation.",
+        "title": "Plastic Injection Molding",
+        "content": "Leverage our expertise in plastic injection molding for both small, intricate components and large, robust housing parts for your electronics.",
+        "background_color": "bg-highlight",
+        "position": "right"
+    },
+    {
+        "image": "",
+        "image_alt": "Customized electronic components with unique finishes.",
+        "title": "Customization Services",
+        "content": "From custom finishes and printing to unique packaging solutions, we help you tailor every detail to match your brand's unique identity.",
+        "background_color": "bg-primary",
+        "position": "left"
+    }
+]

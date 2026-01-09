@@ -1,0 +1,21 @@
+{
+  "name": "Casual Sight | Manufacturing for Music Instruments & Electronics",
+  "short_name": "Casual Sight",
+  "description": "We help brands bring electronic music instruments and consumer electronics to life with expert manufacturing, heartfelt support, and 30 years of experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#AF043D",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
