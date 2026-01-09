@@ -88,8 +88,8 @@ window.inventor_events.push('{{ page.name | split: "." | first }}');
             events: events, // Send any collected events
         };
 
-        const apiUrl = 'https://dev.1voct.org/inventor/api/track_visit/';
-        // const apiUrl = 'https://inventor.1voct.org/inventor/api/track_visit/';
+        // const apiUrl = 'https://dev.1voct.org/inventor/api/track_visit/';
+        const apiUrl = 'https://inventor.1voct.org/inventor/api/track_visit/';
 
         const response = await fetch(apiUrl, {
             method: 'POST',
